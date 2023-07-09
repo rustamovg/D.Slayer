@@ -1,0 +1,347 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700;900&display=swap');
+@import url(//db.onlinewebfonts.com/c/08f5d0ff76c06129945cdef56193e70a?family=Blood+Crow);
+
+/* Scrolbar Start */
+
+::-webkit-scrollbar {
+    display: none;
+}
+/* Scrolbar End */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #081b29;
+    animation: transitionIn 1s;
+}
+
+@keyframes transitionIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+header {
+    position: static;
+    top:0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    /* background-color: black; */
+}
+
+.logo {
+    font-size: 25px;
+    color: #ededed;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 2s;
+}
+
+.logo:hover {
+    filter: drop-shadow(0 0 20px #f0cc00);
+}
+
+.navbar a {
+    font-size: 18px;
+    color: #ededed;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 35px;
+    transition: 0.3s;
+}
+
+.navbar a:hover {
+    color: #00abf0;
+}
+
+.navbar .active {
+    color: #00abf0;
+}
+
+/* Home Start */
+
+.home {
+    height: 88.7vh;
+    display: flex;
+    align-items: center;
+    padding: 0 10%;
+    color: white;
+}
+
+.home-content {
+    max-width: 600px;
+    /* background-color: yellowgreen; */
+}
+
+.home-content h1 {
+    position: relative;
+    font-size: 56px;
+    font-weight: 600;
+    /* font-family: 'Blood Crow', sans-serif; */
+}
+
+.home-content h1::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #081b29;
+    animation: showRight 1s ease forwards;
+    animation-delay: 0.1s;
+}
+
+.home-content h3 {
+    position: relative;
+    font-size: 40px;
+    font-weight: 500;
+    color: #00abf0;
+    font-family: 'Blood Crow', sans-serif;
+}
+
+.home-content h3::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #081b29;
+    animation: showRight 1s ease forwards;
+    animation-delay: 0.2s;
+}
+
+.home-content p {
+    position: relative;
+    font-size: 16px;
+    margin: 20px 0 40px;
+}
+
+.home-content p::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #081b29;
+    animation: showRight 1s ease forwards;
+    animation-delay: 0.3s;
+}
+
+.home-content .links {
+    position: relative;
+    display: flex;
+    /* background-color: yellowgreen; */
+    width: 345px;
+    height: 50px;
+}
+
+.home-content .links::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #081b29;
+    animation: showRight 1s ease forwards;
+    animation-delay: 0.4s;
+    z-index: 2;
+}
+
+.home-content .links a {
+    position: relative;
+    display: inline-flex;
+    width: 50px;
+    height: 100%;
+    border: 2px solid #00abf0;
+    border-radius: 50%;
+    font-size: 19px;
+    color: #00e0f0;
+    text-decoration: none;
+    letter-spacing: 1px;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px;
+    z-index: 1;
+    overflow: hidden;
+}
+
+
+.links a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    border-radius: 50%;
+    background: #00e0f0;
+    z-index: -1;
+    transition: 0.7s;
+}
+
+.links a:hover::before {
+    width: 100%;
+}
+
+a i::before {
+    transition: 0.7s;
+}
+
+a:hover i::before {
+    color: #081b29;
+}
+
+.home-image {
+    position: relative;
+}
+
+.home-image img{
+    width: 650px;
+    /* background-color: yellowgreen; */
+    padding-left: 50px;
+    padding-top: 30px;
+}
+
+.home-image::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #081b29;
+    /* border-left: 3px solid #00e0f0; */
+    animation: showRight 1s ease forwards;
+    animation-delay: 0.6s;
+    z-index: 100;
+}
+
+/* KEYFRAMES ANIMATION */
+
+@keyframes showRight {
+    100% {
+        width: 0;
+    }
+}
+
+/* Home End */
+
+/* About Start */
+
+.about {
+    align-items: center;
+    padding: 5% 10%;
+    color: white;
+}
+
+.about .content {
+    margin-bottom: 5%;
+    display: flex;
+    justify-content: space-between;
+    /* background-color: yellowgreen; */
+}
+
+.about .content .text {
+    max-width: 600px;
+    /* background-color: #00e0f0; */
+}
+
+.about .content .text h1 {
+    font-size: 56px;
+    font-weight: 300;
+    margin-bottom: 30px;
+    font-family: 'Blood Crow', sans-serif;
+}
+
+
+.about .content .text p {
+    margin-bottom: 20px;
+}
+
+.about .content .image {
+    position: relative;
+    width: 400px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    filter: drop-shadow(0 0 30px #00e0f0);
+    /* background-color: yellowgreen; */
+}
+
+
+/* About End */
+
+/* Technics Start */
+
+.technics {
+    height: 88.7vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.water-effect {
+    background-image: url("https://example.com/water.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+/* Technics End */
+
+.to-top {
+    bottom: 32px;
+    right: 32px;
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: solid 2px #f00000;
+    background-color: antiquewhite;
+    opacity: 0;
+    pointer-events: none;
+    box-shadow: 0 0 20px #f0cc00;
+    transition: all .4s;
+
+    text-decoration: none;
+    color: black;
+    font-size: 30px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.to-top.active {
+    pointer-events: auto;
+    opacity: 1;
+    animation-name: move;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes move {
+    0% { transform: translateY(0px) }
+    50% { transform: translateY(-20px) }
+    100% { transform: translateY(0px) }
+}
